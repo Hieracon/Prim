@@ -62,14 +62,14 @@ int prim(int a[50][50], int Q[50], int H[50], int &n, int &r, graph *G) {
 
 	//-----------------------------------------Loading--------------------------------------
 	int k = 0, ct = 0;
-	int m,x, y, c, i, j;
+	int nr_edges,x, y, c, i, j;
 	//int m e variabila noua,retine nr de muchii
 	//^^^^
 	//||||
 	//Very sageti much care atrag atentia ca sa vezi ce e schimbat
 
 
-	m = G->noOfEdges;
+	nr_edges = G->noOfEdges;
 	//si chestiuta de deasupra e noua,initializeaza m cu nr de noduri
 	n = G->noOfVertices;
 	r = 1;
@@ -92,7 +92,7 @@ int prim(int a[50][50], int Q[50], int H[50], int &n, int &r, graph *G) {
 
 	// in for-u asta schimb sa meraga pana la n in sa mearga pana la m
 	//adica schimbi sa mearga pana la nr de noduri in sa mearga pana la numaru de muchii
-	for (i = 0; i < m; i++) {
+	for (i = 0; i < nr_edges; i++) {
 
 		x = G->pEdge[i].source;
 		y = G->pEdge[i].destination;
